@@ -73,3 +73,7 @@ Initial dependency:
 
    src/test/java/hello/GreetingRouterTest.java
         {"message":"Hello, Spring!"}
+
+6) Summary
+   Congratulations!
+   You have developed a Reactive Spring application that includes a WebClient to consume a RESTful service!
