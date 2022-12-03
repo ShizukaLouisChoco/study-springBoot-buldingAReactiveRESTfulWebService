@@ -27,4 +27,16 @@ Initial dependency:
 
    The router listens for traffic on the /hello path and returns the value provided by our reactive handler class.
 
+3) Create a WebClient
+   The Spring RestTemplate class is, by nature, blocking.
+   Consequently, we do not want to use it in a reactive application.
+   For reactive applications, Spring offers the WebClient class, which is non-blocking.
+   We use a WebClient-based implementation to consume our RESTful service:
 
+   src/main/java/hello/GreetingClient.java
+
+   The WebClient class uses reactive features, in the form of a Mono to hold the content of the message (returned by the getMessage method). This is using a function API, rather than an imperative one, to chain reactive operators.
+
+   It can take time to get used to Reactive APIs, but the WebClient has interesting features and can also be used in traditional Spring MVC applications.
+
+   *You can use WebClient to communicate with non-reactive, blocking services, too.
