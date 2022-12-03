@@ -57,3 +57,13 @@ Initial dependency:
 
    The main() method uses Spring Boot’s SpringApplication.run() method to launch an application. Did you notice that there was not a single line of XML? There is no web.xml file, either. This web application is 100% pure Java and you did not have to deal with configuring any plumbing or infrastructure.
 
+5) Build an executable JAR
+   You can run the application
+    Logging output is displayed. The service should be up and running within a few seconds.
+
+    Once the service has started, you can see a line that reads:
+
+    >> message = Hello, Spring!
+
+    That line comes from the reactive content being consumed by the WebClient.
+    Naturally, you can find something more interesting to do with your output than put it in System.out.
